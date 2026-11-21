@@ -1,0 +1,10 @@
+{
+  "name": "PratikshaIQ",
+  "description": "Know the Queue. Plan Your Visit. Pan-India public-service waiting-time and crowd intelligence platform.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "Public Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy-950: #08172B;
+  --color-navy-900: #0F2744;
+  --color-navy-800: #17375E;
+  --color-navy-700: #234B7A;
+
+  --color-teal-700: #0A5C60;
+  --color-teal-600: #0D7377;
+  --color-teal-500: #14919B;
+  --color-teal-50: #EEF7F7;
+
+  --color-civic-bg: #F7F9FB;
+  --color-civic-surface: #FFFFFF;
+  --color-civic-border: #E2E8F0;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #0F2744;
+    background-color: #F7F9FB;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Clean Leaflet overrides matching PratikshaIQ palette */
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  z-index: 10;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 39, 68, 0.14) !important;
+  border: 1px solid #E2E8F0;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
